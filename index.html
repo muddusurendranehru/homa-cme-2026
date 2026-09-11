@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOMA Metabolic Medicine CME 2026</title>
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; font-family: -apple-system, 'Segoe UI', Arial, sans-serif; }
+  body { background:#f4f7f9; color:#222; }
+  header.topbar { background:#fff; border-bottom:1px solid #e2e8ec; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:50; }
+  .brand { display:flex; align-items:center; gap:12px; }
+  .brand-mark { width:42px; height:42px; border-radius:10px; background:#1B3A5C; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px; }
+  .brand-name { font-weight:800; font-size:18px; color:#1B3A5C; }
+  .brand-sub { font-size:11px; color:#1E6E6E; font-weight:600; letter-spacing:0.5px; }
+  nav.tabs { display:flex; gap:6px; }
+  nav.tabs a { text-decoration:none; color:#444; font-weight:600; font-size:14px; padding:8px 16px; border-radius:8px; }
+  nav.tabs a:hover, nav.tabs a.active { background:#1B3A5C; color:#fff; }
+
+  .hero { max-width:960px; margin:0 auto; padding:48px 24px 24px 24px; text-align:center; }
+  .hero .badge { display:inline-block; background:#F0EAD6; color:#8a6d1e; font-size:12px; font-weight:700; padding:8px 16px; border-radius:20px; letter-spacing:0.5px; margin-bottom:18px; }
+  .hero .guidance { color:#777; font-weight:700; font-size:13px; letter-spacing:1.5px; }
+  .hero .minister { color:#1B3A5C; font-weight:800; font-size:22px; margin-top:8px; }
+  .hero .minister-title { color:#666; font-size:13px; margin-top:6px; max-width:640px; margin-left:auto; margin-right:auto; line-height:1.4; }
+  .hero hr { border:none; border-top:2px solid #C9A227; width:70px; margin:22px auto; }
+  .hero h1 { color:#1B3A5C; font-size:34px; font-weight:900; margin-top:6px; }
+  .hero h2 { color:#1E6E6E; font-size:19px; font-weight:700; font-style:italic; margin-top:10px; }
+  .hero .sub { color:#555; font-size:15px; margin-top:8px; }
+
+  .infobar { display:flex; justify-content:center; gap:24px; flex-wrap:wrap; margin-top:28px; }
+  .infobar .item { background:#fff; border:1px solid #e2e8ec; border-radius:10px; padding:14px 22px; font-size:14px; font-weight:700; color:#1B3A5C; }
+  .infobar .item.red { color:#9C2B2B; border-color:#f3d3d3; background:#fdf2f2; }
+  .infobar .item.green { color:#1E7A34; border-color:#cfe8d6; background:#f2f9f4; }
+
+  section { max-width:1000px; margin:0 auto; padding:28px 24px; }
+  section h3 { color:#1B3A5C; font-size:22px; font-weight:800; margin-bottom:18px; border-left:5px solid #1E6E6E; padding-left:12px; }
+
+  .block-head { background:#1B3A5C; color:#fff; font-weight:800; font-size:14px; padding:12px 18px; border-radius:8px 8px 0 0; margin-top:22px; }
+  .block-sub { font-size:12px; color:#777; font-style:italic; padding:8px 18px; background:#fff; border-left:1px solid #e2e8ec; border-right:1px solid #e2e8ec; }
+  table.agenda { width:100%; border-collapse:collapse; background:#fff; box-shadow:0 1px 4px rgba(0,0,0,0.05); }
+  table.agenda th { background:#eef2f5; color:#1B3A5C; font-size:12px; text-align:left; padding:10px 12px; border-bottom:2px solid #dde3e6; }
+  table.agenda td { padding:10px 12px; font-size:13.5px; border-bottom:1px solid #eef1f3; vertical-align:top; }
+  table.agenda tr.break td { background:#eaf1f6; font-weight:700; }
+  table.agenda tr.new td { background:#fff6df; font-weight:700; }
+  table.agenda tr.minister td { background:#fdf2f2; }
+
+  .committee-grid { display:grid; grid-template-columns: 1fr 1fr; gap:10px 24px; background:#fff; border-radius:10px; padding:20px; box-shadow:0 1px 4px rgba(0,0,0,0.05); }
+  .committee-grid .role { font-weight:800; color:#1E6E6E; font-size:12.5px; }
+  .committee-grid .name { color:#333; font-size:13.5px; margin-bottom:10px; }
+
+  .reg-box { background:#fff; border-radius:12px; padding:28px; text-align:center; box-shadow:0 1px 6px rgba(0,0,0,0.06); }
+  .reg-box .price { font-size:28px; font-weight:900; color:#9C2B2B; }
+  .reg-box .price small { font-size:14px; color:#777; font-weight:600; }
+  iframe.gform { width:100%; height:900px; border:none; margin-top:20px; }
+
+  footer { background:#1B3A5C; color:#dbe4ea; text-align:center; padding:28px; margin-top:40px; font-size:13px; }
+  footer .tagline { font-weight:800; color:#fff; letter-spacing:1px; margin-bottom:8px; }  .leadership { max-width:960px; margin:0 auto; padding:10px 24px 30px 24px; }
+  .leadership h4 { text-align:center; color:#1B3A5C; font-size:15px; font-weight:800; letter-spacing:1px; margin-bottom:18px; }
+  .leadership-grid { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; }
+  .leadership-card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.08); width:280px; }
+  .leadership-card img { width:100%; height:220px; object-fit:cover; object-position:top center; display:block; }
+  .leadership-card .cap { padding:12px 14px; font-size:12.5px; color:#444; line-height:1.4; }
+  .leadership-card .cap b { color:#1B3A5C; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">H</div>
+    <div>
+      <div class="brand-name">HOMA HEALTHCARE CENTER</div>
+      <div class="brand-sub">PRECISION METABOLIC MEDICINE</div>
+    </div>
+  </div>
+  <nav class="tabs">
+    <a href="#agenda" class="active">Agenda</a>
+    <a href="#committee">Committee</a>
+    <a href="#register">Registration</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="badge">HOMA CME 2026 &bull; T-HUB, HYDERABAD</div>
+  <div class="guidance">UNDER THE GUIDANCE OF</div>
+  <div class="minister">SRI DUDDILLA SRIDHAR BABU GARU</div>
+  <div class="minister-title">Hon'ble Minister for IT, Electronics &amp; Communications, Industries &amp; Commerce, and Legislative Affairs, Government of Telangana; MLA, Manthani</div>
+  <hr>
+  <h1>HOMA Metabolic Medicine CME 2026</h1>
+  <h2>&ldquo;Beyond Numbers&rdquo; &mdash; Precision Phenotyping in Diabetes &amp; Metabolic Care</h2>
+  <div class="sub">A Hybrid Conference &mdash; In-person at T-Hub + Live Online, with International Faculty</div>
+
+  <div class="infobar">
+    <div class="item">&#128197; Monday, 21 September 2026</div>
+    <div class="item">&#128337; 9:00 AM &ndash; 6:15 PM</div>
+    <div class="item">&#128205; T-Hub, Hyderabad</div>
+    <div class="item green">&#9989; NMC / TSMC Credits Applied</div>
+    <div class="item red">&#128293; Early Bird &#8377;2,500 (till 16 Sept) &rarr; &#8377;3,000 after &bull; Only 50 Seats</div>
+  </div></div>
+
+<div class="leadership">
+  <h4>ENGAGEMENT WITH TELANGANA LEADERSHIP</h4>
+  <div class="leadership-grid">
+    <div class="leadership-card">
+      <img src="img/cm_photo.jpeg" alt="Dr. Muddu with Hon'ble CM">
+      <div class="cap">Dr. Surendra Nehru Muddu presenting <b>"BP: The Untold Truth"</b> to Hon'ble Chief Minister Sri Revanth Reddy Garu</div>
+    </div>
+    <div class="leadership-card">
+      <img src="img/minister_photo.jpeg" alt="Dr. Muddu with Hon'ble Minister">
+      <div class="cap">Dr. Surendra Nehru Muddu with Hon'ble Minister <b>Sri Duddilla Sridhar Babu Garu</b>, Chief Guest, HOMA CME 2026</div>
+    </div>
+  </div>
+</div>
+
+<section id="agenda">
+  <h3>Scientific Programme</h3>
+
+  <div class="block-head">BLOCK A &mdash; Registration &amp; Scientific Start (before Minister)</div>
+  <div class="block-sub">Session Chairpersons: Dr. Vasanth Kumar &middot; Dr. Ramesh Hanumkonda</div>
+  <table class="agenda">
+    <tr><th>Time</th><th>Topic</th><th>Speaker</th><th>Chair</th></tr>
+    <tr><td>8:30&ndash;9:00</td><td>Registration &amp; CME Desk</td><td>Organising Team</td><td>&mdash;</td></tr>
+    <tr><td>9:00&ndash;9:15</td><td>Welcome &mdash; Beyond HbA1c: Why Metabolic Phenotyping Matters</td><td>Dr. Surendra Nehru Muddu</td><td>Organising Chair</td></tr>
+    <tr><td>9:15&ndash;9:35</td><td>Lab Matrix: HOMA-IR, TyG, HbA1c, C-Peptide &amp; Autoantibodies</td><td>Dr. Ramadevi</td><td>Dr. Anunayi</td></tr>
+    <tr><td>9:35&ndash;9:55</td><td>32-Subtype Framework &mdash; Diabetes Beyond Type 1/Type 2</td><td>Dr. Surendra Nehru Muddu</td><td>Dr. Vasanth Kumar</td></tr>
+    <tr><td>9:55&ndash;10:15</td><td>Cardioprotection Beyond Glycemic Control</td><td>Dr. R.K. Jain (Senior)</td><td>Dr. Ravinder Reddy</td></tr>
+    <tr class="break"><td>10:15&ndash;10:25</td><td>Assemble for Inaugural / Minister's Arrival</td><td>Protocol</td><td>&mdash;</td></tr>
+  </table>
+
+  <div class="block-head">BLOCK B &mdash; Hon'ble Minister (10:30 AM, Confirmed)</div>
+  <table class="agenda">
+    <tr><th>Time</th><th>Item</th><th colspan="2">Lead</th></tr>
+    <tr class="minister"><td>10:30&ndash;10:40</td><td>Welcome of Hon'ble Minister</td><td colspan="2">Organising Chair</td></tr>
+    <tr class="minister"><td>10:40&ndash;10:55</td><td>Inauguration &mdash; Metric Explorer (Play Store Production)</td><td colspan="2">Dr. Muddu + Hon'ble Minister</td></tr>
+    <tr class="minister"><td>10:55&ndash;11:05</td><td>Brief Remarks</td><td colspan="2">Hon'ble Minister</td></tr>
+    <tr class="minister"><td>11:05&ndash;11:10</td><td>&ldquo;BP: The Untold Truth&rdquo; &mdash; Community Presentation Moment</td><td colspan="2">Dr. Muddu</td></tr>
+    <tr class="minister"><td>11:10&ndash;11:20</td><td>Group Photograph &middot; Press Bytes</td><td colspan="2">Press Desk</td></tr>
+    <tr class="break"><td>11:20&ndash;11:30</td><td>Tea &middot; Resume CME</td><td colspan="2">&mdash;</td></tr>
+  </table>
+
+  <div class="block-head">BLOCK C &mdash; Late Morning CME</div>
+  <div class="block-sub">Session Chairpersons: Dr. R.K. Jain &middot; Dr. Vasanth Kumar</div>
+  <table class="agenda">
+    <tr><th>Time</th><th>Topic</th><th>Speaker</th><th>Chair</th></tr>
+    <tr><td>11:30&ndash;11:50</td><td>Major Cardiac Complications in Diabetes</td><td>Dr. Srinivas Kumar, MD DM (+ Dr. Loknath / Dr. Narsa Raju)</td><td>Dr. R.K. Jain</td></tr>
+    <tr><td>11:50&ndash;12:10</td><td>Cardiac Interventions in Diabetes &mdash; Practical Choices</td><td>Dr. Ravinder Reddy &middot; Dr. Kumar, MD DM</td><td>Dr. R.K. Jain</td></tr>
+    <tr class="new"><td>12:10&ndash;12:30</td><td>Central Obesity and the Role of CT Imaging</td><td>Dr. Vijay Bhaskar (Vista Imaging)</td><td>Dr. Ramadevi</td></tr>
+    <tr><td>12:30&ndash;12:45</td><td>Early Detection of Diabetic Nephropathy</td><td>Dr. Prasad / Dr. Manthena</td><td>Dr. Subramanyam</td></tr>
+    <tr class="new"><td>12:45&ndash;12:55</td><td>Fireside Chat: Urology &amp; Nephrology in Diabetes</td><td>Dr. Mallikarjuna (Asian Institute of Urology &amp; Nephrology)</td><td>&mdash;</td></tr>
+    <tr class="break"><td>13:00&ndash;13:30</td><td>Lunch Break</td><td>&mdash;</td><td>&mdash;</td></tr>
+  </table>
+
+  <div class="block-head">BLOCK D &mdash; Afternoon CME</div>
+  <div class="block-sub">Session Chairpersons: Dr. Ramesh Hanumkonda &middot; Dr. Vasanth Kumar</div>
+  <table class="agenda">
+    <tr><th>Time</th><th>Topic</th><th>Speaker</th><th>Chair</th></tr>
+    <tr><td>13:30&ndash;13:50</td><td>MASLD / NAFLD in Diabetes</td><td>Dr. Pradeep</td><td>Dr. Mardha</td></tr>
+    <tr class="new"><td>13:50&ndash;14:10</td><td>Diabetic Neuropathy</td><td>Dr. Chandra Sekhar, MD, Prof. (Mulugu)</td><td>Dr. Jyothi (Neurology)</td></tr>
+    <tr class="new"><td>14:10&ndash;14:20</td><td>Fireside Chat, 10 min</td><td>Dr. S.V. Prasad (Neurology)</td><td>&mdash;</td></tr>
+    <tr><td>14:20&ndash;14:35</td><td>Diabetic Retinopathy Screening</td><td>Dr. Prasad (Ophthalmology)</td><td>Dr. Maddiah</td></tr>
+    <tr><td>14:35&ndash;14:50</td><td>Paediatric Diabetes</td><td>Dr. M.B. Basha</td><td>Dr. Athaullah</td></tr>
+    <tr class="new"><td>14:50&ndash;15:05</td><td>Diabetes Peripheral Vascular Disease (Hybrid, USA)</td><td>Dr. Paladugu Ramesh (Fort Worth, Dallas)</td><td>&mdash;</td></tr>
+    <tr><td>15:05&ndash;15:20</td><td>Diabetes in Pregnancy &amp; GDM / PCOS</td><td>Dr. Nandi / Dr. Gowri / Dr. Fahmida Banu</td><td>Dr. Riyaz</td></tr>
+    <tr><td>15:20&ndash;15:35</td><td>Diabetic Foot &amp; Limb Salvage</td><td>Dr. Venkat (Ortho) &middot; Dr. Srinivas (Surgery)</td><td>Dr. Govind Reddy</td></tr>
+    <tr class="break"><td>15:35&ndash;15:50</td><td>Tea Break</td><td>&mdash;</td><td>&mdash;</td></tr>
+    <tr><td>15:50&ndash;16:10</td><td>Precision Pharmacotherapy by Phenotype</td><td>Dr. Ramesh Hanumkonda (Ex-President, APICON)</td><td>Dr. Vasanth Kumar</td></tr>
+    <tr><td>16:10&ndash;16:25</td><td>Diabesity &amp; Metabolic/Bariatric Surgery</td><td>Dr. Bikshith</td><td>Dr. Srinivas</td></tr>
+    <tr><td>16:25&ndash;16:40</td><td>Panel &mdash; Is HbA1c Enough? HOMA-IR/TyG in Screening</td><td>Muddu &middot; Vasanth Kumar &middot; Ramadevi &middot; R.K. Jain &middot; Pradeep</td><td>Moderator: Dr. Vamsee Krishna</td></tr>
+  </table>
+
+  <div class="block-head">BLOCK E &mdash; Workshops &amp; International Faculty (4:40 PM &ndash; 6:15 PM)</div>
+  <div class="block-sub">Workshop Chair: Dr. Surendra Nehru Muddu &middot; Co-Chair: Dr. Vamsee Krishna</div>
+  <table class="agenda">
+    <tr><th>Time</th><th>Session</th><th colspan="2">Faculty</th></tr>
+    <tr><td>16:40&ndash;17:05</td><td>W1 &mdash; What is Metric Explorer? Live Clinical Walkthrough</td><td colspan="2">Dr. Muddu &middot; Dr. Basavaraj Naik &middot; Dr. Goutham</td></tr>
+    <tr><td>17:05&ndash;17:30</td><td>W2 &mdash; Diet &amp; Exercise Design by Phenotype</td><td colspan="2">Dr. Muddu &middot; Mrs. Mrunala &middot; Dr. Bikshith</td></tr>
+    <tr><td>17:30&ndash;17:50</td><td>W3 &mdash; Metabolism Calculator &amp; Data Analysis (HOMA Online Tools)</td><td colspan="2">Dr. Muddu &middot; Dr. Ramadevi &middot; Dr. Vamsee Krishna</td></tr>
+    <tr class="new"><td>17:50&ndash;18:00</td><td>Tobacco &amp; Diabetes / Pain Management in Diabetes (Hybrid, USA)</td><td colspan="2">Dr. Murali Mohan Agnirekula (Florida) &mdash; <i>time pending confirmation</i></td></tr>
+    <tr class="new"><td>18:00&ndash;18:10</td><td>Fireside Chat, Evening Session</td><td colspan="2">Dr. Shivram, Prof. of Medicine (Khammam)</td></tr>
+    <tr><td>18:10&ndash;18:15</td><td>Valedictory &middot; CME Feedback &middot; Certificates Process</td><td colspan="2">Organising Chair</td></tr>
+  </table>
+</section>
+
+<section id="committee">
+  <h3>Organising Committee</h3>
+  <div class="committee-grid">
+    <div><div class="role">ORGANISING CHAIRPERSON</div><div class="name">Dr. Surendra Nehru Muddu, MD &mdash; HOMA Healthcare Center</div></div>
+    <div><div class="role">SCIENTIFIC CHAIRPERSON</div><div class="name">Dr. Vasanth Kumar, MD &mdash; Professor of Medicine (RSSDI)</div></div>
+    <div><div class="role">CO-CHAIRPERSONS</div><div class="name">Dr. R.K. Jain (Cardiology) &middot; Dr. Ramesh Hanumkonda (Ex-President, APICON) &middot; Dr. Ravinder Reddy</div></div>
+    <div><div class="role">ORGANISING SECRETARY</div><div class="name">Dr. Vamsee Krishna</div></div>
+    <div><div class="role">RADIOLOGY / IMAGING LEAD</div><div class="name">Dr. Vijay Bhaskar &mdash; Vista Imaging (T-Hub)</div></div>
+    <div><div class="role">SCIENTIFIC CONVENER</div><div class="name">Dr. Ramadevi, MD (Biochemistry)</div></div>
+    <div><div class="role">WORKSHOP CONVENER</div><div class="name">Dr. Surendra Nehru Muddu</div></div>
+    <div><div class="role">WORKSHOP DIETETICS LEAD</div><div class="name">Mrs. Mrunala</div></div>
+    <div><div class="role">IMA COORDINATION</div><div class="name">Dr. R. Bai &mdash; IMA President, Kukatpally</div></div>
+    <div><div class="role">ESI COORDINATORS</div><div class="name">Dr. Naresh &middot; Dr. Srinivas &middot; Dr. Umesh</div></div>
+  </div>
+</section>
+
+<section id="register">
+  <h3>Registration</h3>
+  <div class="reg-box">
+    <div class="price">&#8377;2,500 <small>till 16 Sept &middot; then &#8377;3,000</small></div>
+    <div style="margin-top:6px; color:#9C2B2B; font-weight:700;">&#9889; Only 50 Seats &mdash; Register Early</div>
+    <p style="margin-top:14px; color:#555; font-size:14px;">Fee includes conference kit, lunch &amp; refreshments. NMC/TSMC CME credit points applied.</p>
+    <iframe class="gform" src="https://docs.google.com/forms/d/e/1FAIpQLScRRlDbB1LmOKyc5C-l_1RQ_hJq3_uQcAsSAB0u-uc8LZ3djA/viewform?embedded=true">Loading form...</iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="tagline">KNOWLEDGE &bull; COLLABORATION &bull; PRECISION DIABETES CARE</div>
+  <div>HOMA Healthcare Center, Gachibowli, Hyderabad, Telangana</div>
+  <div>&#128222; +91 99637 21999</div>
+</footer>
+
+</body>
+</html>

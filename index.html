@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -92,6 +92,9 @@
   .form-toggle summary::-webkit-details-marker { display:none; }
   iframe.gform { width:100%; height:720px; border:none; margin-top:14px; border-radius:8px; background:#f8fafb; }
 
+  .paid-box { margin-top:18px; padding:16px; background:#f2f9f4; border:1px solid #cfe8d6; border-radius:10px; }
+  .paid-box .t { font-weight:800; color:#1E7A34; font-size:14px; margin-bottom:8px; }
+
   footer { background:#1B3A5C; color:#dbe4ea; text-align:center; padding:28px 16px; margin-top:32px; font-size:13px; }
   footer .tagline { font-weight:800; color:#fff; letter-spacing:1px; margin-bottom:8px; }
 
@@ -115,7 +118,13 @@
     .scope-labels div { flex:1 1 30%; }
     section { padding:18px 14px; }
     iframe.gform { height:560px; }
-  }
+  }  .faculty-section { max-width:960px; margin:0 auto; padding:10px 20px 24px; }
+  .faculty-section h4 { text-align:center; color:#1B3A5C; font-size:14px; font-weight:800; letter-spacing:1px; margin-bottom:16px; }
+  .faculty-grid { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+  .faculty-card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.08); width:220px; max-width:100%; text-align:center; }
+  .faculty-card img { width:100%; height:220px; object-fit:cover; object-position:top center; display:block; }
+  .faculty-card .fname { padding:12px 12px 2px; font-size:14px; font-weight:800; color:#1B3A5C; }
+  .faculty-card .frole { padding:0 12px 14px; font-size:12px; color:#666; line-height:1.4; }
 </style>
 </head>
 <body>
@@ -135,39 +144,39 @@
   </nav>
 </header>
 
-<div class="countdown-bar" id="countdownBar">Loading countdownâ€¦</div>
+<div class="countdown-bar" id="countdownBar">Loading countdown&hellip;</div>
 
 <div class="hero">
   <div class="top-banner">
     <div class="l1">FIRST IN INDIA &mdash; DON'T MISS THIS</div>
     <div class="l2">Update Your Metabolic Knowledge. Join the Next Big Wave in Central Obesity, Heart &amp; Diabetes Care.</div>
   </div>
-  <div class="badge">HOMA CME 2026 &bull; T-HUB MARVEL, HYDERABAD</div>
+  <div class="badge">HOMA CME 2026 &bull; T-HUB, GACHIBOWLI, HYDERABAD</div>
   <div class="guidance">UNDER THE GUIDANCE OF</div>
   <div class="minister">SRI DUDDILLA SRIDHAR BABU GARU</div>
   <div class="minister-title">Hon'ble Minister for IT, Electronics &amp; Communications, Industries &amp; Commerce, and Legislative Affairs, Government of Telangana; MLA, Manthani</div>
   <hr>
-  <h1>MNR â€” NMC â€” IMA &amp; HOMA CME 2026</h1>
+  <h1>MNR &mdash; NMC &mdash; IMA &amp; HOMA CME 2026</h1>
   <h2>&ldquo;Beyond Numbers&rdquo; &mdash; Precision Phenotyping in Diabetes &amp; Metabolic Care</h2>
-  <div class="sub">A Hybrid Conference &mdash; In-person at T-Hub Marvel + Live Online, with International Faculty</div>
+  <div class="sub">A Hybrid Conference &mdash; In-person at T-Hub, Gachibowli + Live Online, with International Faculty</div>
   <div class="tagline-red">Screens Don't Discriminate. Neither Does Diabetes. &mdash; Everyone at Risk, Not Just Desk Jobs.</div>
 
   <div class="proof">
-    <div class="pill hot" id="seatsPill">6 doctors registered Â· 44 seats remaining</div>
-    <div class="pill ok">NMC / IMA Â· 2 Credit Points Approved</div>
-    <div class="pill hot">Early Bird â‚¹2,500 till 16 Sept</div>
+    <div class="pill hot" id="seatsPill">6 doctors registered &middot; 44 seats remaining</div>
+    <div class="pill ok">NMC / IMA &middot; 2 Credit Points Approved</div>
+    <div class="pill hot">Early Bird &#8377;2,500 till 16 Sept</div>
   </div>
 
   <div class="cta-row">
-    <a class="btn btn-wa" href="https://wa.me/919963721999?text=Hi%2C%20I%27m%20interested%20in%20HOMA%20CME%202026.%20Please%20share%20details." target="_blank" rel="noopener">I'M INTERESTED â€” WhatsApp Us</a>
+    <a class="btn btn-wa" href="https://wa.me/919963721999?text=Hi%2C%20I%27m%20interested%20in%20HOMA%20CME%202026.%20Please%20share%20details." target="_blank" rel="noopener">I'M INTERESTED &mdash; WhatsApp Us</a>
     <a class="btn btn-sec" href="#register">Pay UPI &amp; register</a>
   </div>
 
   <div class="infobar">
     <div class="item">&#128197; Monday, 21 September 2026</div>
-    <div class="item">&#128337; 9:00 AM &ndash; 6:00 PM</div>
-    <div class="item">&#128205; T-Hub Marvel &mdash; Telangana's Premier Startup &amp; Innovation Hub</div>
-    <div class="item green">&#9989; NMC / IMA Â· 2 Credit Points Approved</div>
+    <div class="item">&#128337; 9:00 AM &ndash; 6:50 PM</div>
+    <div class="item">&#128205; T-Hub, Gachibowli &mdash; Telangana's Premier Startup &amp; Innovation Hub</div>
+    <div class="item green">&#9989; NMC / IMA &middot; 2 Credit Points Approved</div>
     <div class="item red">&#128293; Early Bird &#8377;2,500 (till 16 Sept) &rarr; &#8377;3,000 after &bull; Few Seats Remaining</div>
   </div>
 </div>
@@ -195,6 +204,17 @@
     <div>DIABETOLOGY</div>
     <div>CARDIOLOGY</div>
     <div>NEPHROLOGY</div>
+  </div>
+</div>
+
+<div class="faculty-section">
+  <h4>FEATURED FACULTY</h4>
+  <div class="faculty-grid">
+    <div class="faculty-card">
+      <img src="img/vistabhaskar.jpg" alt="Dr. Vijay Bhaskar">
+      <div class="fname">Dr. Vijay Bhaskar, MD</div>
+      <div class="frole">Radiology / Imaging Lead<br>Chief Radiologist, Vista Imaging</div>
+    </div>
   </div>
 </div>
 
@@ -269,7 +289,7 @@
     <tr><td>17:25&ndash;17:55</td><td>W3 &mdash; Metabolism Calculator &amp; Data Analysis (HOMA Online Tools)</td><td colspan="2">Dr. Muddu &middot; Dr. Ramadevi &middot; Dr. Vamsee Krishna</td></tr>
     <tr><td>17:55&ndash;18:00</td><td>Transition to USA Speakers (virtual)</td><td colspan="2">Organising Chair</td></tr>
     <tr class="new"><td>18:00&ndash;18:10</td><td>Pain Management in Diabetes</td><td>Dr. Murali Angerekula (Pain Specialist, USA)</td><td>&mdash;</td></tr>
-    <tr class="new"><td>18:20&ndash;18:40</td><td>PVD Complications in Diabetes</td><td>Dr. Paladugu Ramesh (Vascular Surgeon, Dallas, USA)</td><td>&mdash;</td></tr>
+    <tr class="new"><td>18:10&ndash;18:40</td><td>PVD Complications in Diabetes</td><td>Dr. Paladugu Ramesh (Vascular Surgeon, Dallas, USA)</td><td>&mdash;</td></tr>
     <tr><td>18:40&ndash;18:50</td><td>Valedictory &middot; CME Feedback &middot; Certificates Process</td><td colspan="2">Organising Chair</td></tr>
   </table>
   </div>
@@ -296,19 +316,24 @@
   <h3>Registration</h3>
   <div class="reg-box">
     <div class="price">&#8377;2,500 <small>till 16 Sept &middot; then &#8377;3,000</small></div>
-    <div style="margin-top:6px; color:#9C2B2B; font-weight:700;" id="regSeatsLine">Only 50 seats â€” 44 remaining</div>
-    <p style="margin-top:12px; color:#555; font-size:14px;">Fee includes conference kit, lunch &amp; refreshments. NMC / IMA Â· 2 credit points approved.</p>
+    <div style="margin-top:6px; color:#9C2B2B; font-weight:700;" id="regSeatsLine">Only 50 seats &mdash; 44 remaining</div>
+    <p style="margin-top:12px; color:#555; font-size:14px;">Fee includes conference kit, lunch &amp; refreshments. NMC / IMA &middot; 2 credit points approved.</p>
 
     <div class="cta-row">
-      <a class="btn btn-wa" href="https://wa.me/919963721999?text=Hi%2C%20I%27m%20interested%20in%20HOMA%20CME%202026.%20Please%20share%20details." target="_blank" rel="noopener">ðŸ’¬ I'M INTERESTED â€” Tap to WhatsApp Us</a>
+      <a class="btn btn-wa" href="https://wa.me/919963721999?text=Hi%2C%20I%27m%20interested%20in%20HOMA%20CME%202026.%20Please%20share%20details." target="_blank" rel="noopener">&#128172; I'M INTERESTED &mdash; Tap to WhatsApp Us</a>
     </div>
     <div style="color:#777; font-size:13px; margin-top:10px;">No time to fill a form? One tap, we'll follow up with you directly.</div>
 
     <div class="upi-wrap">
       <img src="img/upi_qr.png" alt="UPI QR" onerror="this.style.display='none'">
-      <div style="font-size:12.5px; color:#666; margin-top:6px;">Scan to pay via UPI â€” mention your name</div>
+      <div style="font-size:12.5px; color:#666; margin-top:6px;">Scan to pay via UPI &mdash; mention your name</div>
       <div class="upi-id">surendra.muddu-2@oksbi</div>
       <div style="font-size:12px; color:#666; margin-top:8px;">Then WhatsApp payment screenshot to +91 99637 21999</div>
+    </div>
+
+    <div class="paid-box">
+      <div class="t">&#9989; Already paid?</div>
+      <a class="btn btn-wa" style="width:100%; box-sizing:border-box;" href="https://wa.me/919963721999?text=I%20have%20made%20the%20payment%20for%20HOMA%20CME%202026.%20Name%3A%20%5Byour%20name%5D%2C%20Hospital%3A%20%5Byour%20hospital%5D" target="_blank" rel="noopener">I'VE PAID &mdash; Notify Us Now</a>
     </div>
 
     <details class="form-toggle">
@@ -326,7 +351,7 @@
 </footer>
 
 <div class="sticky-cta">
-  <div class="meta" id="stickyMeta">44 seats left Â· Early bird till 16 Sept</div>
+  <div class="meta" id="stickyMeta">44 seats left &middot; Early bird till 16 Sept</div>
   <a class="btn btn-wa" href="https://wa.me/919963721999?text=Hi%2C%20I%27m%20interested%20in%20HOMA%20CME%202026.%20Please%20share%20details." target="_blank" rel="noopener">Register on WhatsApp</a>
 </div>
 
@@ -336,9 +361,9 @@
   var CAPACITY = 50;
   var left = Math.max(0, CAPACITY - REGISTERED);
   var seatsEl = document.getElementById('seatsPill');
-  if (seatsEl) seatsEl.textContent = REGISTERED + ' doctors registered Â· ' + left + ' seats remaining';
+  if (seatsEl) seatsEl.textContent = REGISTERED + ' doctors registered \u00B7 ' + left + ' seats remaining';
   var regLine = document.getElementById('regSeatsLine');
-  if (regLine) regLine.textContent = 'Only ' + CAPACITY + ' seats â€” ' + left + ' remaining';
+  if (regLine) regLine.textContent = 'Only ' + CAPACITY + ' seats \u2014 ' + left + ' remaining';
   var stickyMeta = document.getElementById('stickyMeta');
 
   var earlyBirdEnd = new Date('2026-09-16T23:59:59+05:30').getTime();
@@ -367,10 +392,10 @@
     var timeStr = d + 'd ' + pad(h) + 'h ' + pad(m) + 'm ' + pad(s) + 's';
     if (bar) {
       bar.innerHTML = (warn ? '<span class="warn">' + label + ' ' + timeStr + '</span>' : '<span>' + label + ' ' + timeStr + '</span>') +
-        ' Â· <span>' + left + ' seats left</span> Â· â‚¹' + (now <= earlyBirdEnd ? '2,500' : '3,000');
+        ' \u00B7 <span>' + left + ' seats left</span> \u00B7 \u20B9' + (now <= earlyBirdEnd ? '2,500' : '3,000');
     }
     if (stickyMeta) {
-      stickyMeta.textContent = left + ' seats left Â· ' + (now <= earlyBirdEnd ? 'Early bird till 16 Sept' : 'Fee â‚¹3,000');
+      stickyMeta.textContent = left + ' seats left \u00B7 ' + (now <= earlyBirdEnd ? 'Early bird till 16 Sept' : 'Fee \u20B93,000');
     }
   }
   tick();

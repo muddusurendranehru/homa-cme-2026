@@ -66,17 +66,19 @@
   .faculty-section .faculty-sub { text-align:center; color:#666; font-size:13px; margin-bottom:30px; }
   .faculty-section h4 { text-align:center; color:#C9A227; font-size:14px; font-weight:800; letter-spacing:1.5px; margin:30px 0 18px 0; text-transform:uppercase; }
 
-  .featured-grid { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; margin-bottom:30px; }
+  .featured-grid { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; margin-bottom:20px; }
   .featured-card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.08); width:240px; max-width:100%; text-align:center; border:2px solid #C9A227; }
   .featured-card img { width:100%; height:240px; object-fit:cover; object-position:top center; display:block; background:#e8eef2; }
   .featured-card .avatar { width:100%; height:240px; background:#1B3A5C; color:#C9A227; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:48px; letter-spacing:2px; }
   .featured-card .fname { padding:14px 12px 4px; font-size:15px; font-weight:800; color:#1B3A5C; line-height:1.3; }
   .featured-card .frole { padding:0 12px 16px; font-size:12px; color:#666; line-height:1.4; }
 
-  .names-block { background:#fff; border-radius:10px; padding:24px; box-shadow:0 1px 4px rgba(0,0,0,0.05); }
-  .names-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:8px 24px; }
-  .names-grid div { font-size:13.5px; color:#333; padding:6px 0; border-bottom:1px solid #eef1f3; }
-  .names-grid div b { color:#1B3A5C; font-weight:700; }
+  .speakers-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:18px; max-width:1100px; margin:0 auto; }
+  .sc { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.06); text-align:center; padding-bottom:10px; }
+  .sc img { width:100%; height:160px; object-fit:cover; object-position:top center; display:block; }
+  .sc .av { width:100%; height:160px; background:#1B3A5C; color:#C9A227; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:38px; letter-spacing:1px; }
+  .sc .sn { padding:10px 8px 2px; font-size:12.5px; font-weight:800; color:#1B3A5C; line-height:1.3; }
+  .sc .sr { padding:0 8px 8px; font-size:10.5px; color:#666; line-height:1.35; }
 
   section { max-width:1000px; margin:0 auto; padding:24px 20px; }
   section h3 { color:#1B3A5C; font-size:20px; font-weight:800; margin-bottom:16px; border-left:5px solid #1E6E6E; padding-left:12px; }
@@ -132,6 +134,8 @@
     .scope-labels div { flex:1 1 30%; }
     section { padding:18px 14px; }
     iframe.gform { height:560px; }
+    .speakers-grid { grid-template-columns:repeat(auto-fit, minmax(130px, 1fr)); gap:12px; }
+    .sc img, .sc .av { height:130px; font-size:30px; }
   }
 </style>
 </head>
@@ -223,7 +227,7 @@
   <h4>Featured Faculty</h4>
   <div class="featured-grid">
     <div class="featured-card">
-      <div class="avatar">SNM</div>
+      <img src="img/drmuddusurendranehru.jpg" alt="Dr. Muddu Surendra Nehru">
       <div class="fname">Dr. Muddu Surendra Nehru</div>
       <div class="frole">MD &mdash; Organising Chairperson<br>HOMA Healthcare Center</div>
     </div>
@@ -245,39 +249,37 @@
   </div>
 
   <h4>Speakers &amp; Chairpersons</h4>
-  <div class="names-block">
-    <div class="names-grid">
-      <div><b>Dr. Athaullah</b> &mdash; Sr. Consultant Physician</div>
-      <div><b>Dr. Anunayi</b> &mdash; Professor of Pathology</div>
-      <div><b>Dr. Mahboob Basha</b> &mdash; MD, Professor of Pediatrics</div>
-      <div><b>Dr. Ram Subba Reddy</b> &mdash; Professor of Psychiatry</div>
-      <div><b>Dr. Maddiah</b> &mdash; Chief ENT Surgeon</div>
-      <div><b>Dr. Vinod</b> &mdash; MBBS, Retired Civil Surgeon</div>
-      <div><b>Dr. Srinivas Prasad</b> &mdash; Senior Neurologist</div>
-      <div><b>Dr. Jyothi</b> &mdash; Senior Neurologist</div>
-      <div><b>Dr. Mulugu Chandra Sekhar</b> &mdash; HOD &amp; Professor of Medicine</div>
-      <div><b>Dr. Narsaraju</b> &mdash; Chief Intervention Cardiologist</div>
-      <div><b>Dr. B. Seetharam</b> &mdash; Diabetologist</div>
-      <div><b>Dr. Soujanya Vaddala</b> &mdash; Physician, Revive Center</div>
-      <div><b>Dr. Fahmida Banu</b> &mdash; MD, MRCOG, FRCOG</div>
-      <div><b>Dr. Ravinder Reddy</b> &mdash; MD, DNB (Cardiologist)</div>
-      <div><b>Dr. R.K. Jain</b> &mdash; MD, DM (Cardiology)</div>
-      <div><b>Dr. Kasturi Ravinder Reddy</b> &mdash; MD, DNB (Cardiology)</div>
-      <div><b>Dr. Rakesh Dhir</b> &mdash; MD, Professor of Medicine</div>
-      <div><b>Dr. Syed Mohammed Ghouse</b> &mdash; MS, DNB (Urology)</div>
-      <div><b>Dr. Harsh Atul Hirani</b> &mdash; MBBS, F.Diab, ACAI, NCAM</div>
-      <div><b>Dr. Murali Angerekula</b> &mdash; Pain Specialist, USA</div>
-      <div><b>Dr. Paladugu Ramesh</b> &mdash; Vascular Surgeon, Dallas USA</div>
-      <div><b>Dr. Mallikarjunappa</b> &mdash; MBBS, Retired Civil Surgeon</div>
-      <div><b>Dr. Chalapathi Rao</b> &mdash; MBBS, DA</div>
-      <div><b>Dr. Srinivas Reddy</b> &mdash; MD (Physician), Mahabubnagar</div>
-      <div><b>Dr. Subbarayudu</b> &mdash; Gynecologist, Retired Civil Surgeon</div>
-      <div><b>Dr. Vasanth Kumar</b> &mdash; MD, Professor of Medicine (RSSDI)</div>
-      <div><b>Dr. Basavaraj Naik</b> &mdash; MD, Professor of Medicine</div>
-      <div><b>Dr. Goutham</b> &mdash; PG</div>
-      <div><b>Mrs. Mrunala</b> &mdash; Dietetics Lead</div>
-      <div><b>Dr. R. Bai</b> &mdash; IMA President, Kukatpally</div>
-    </div>
+  <div class="speakers-grid">
+    <div class="sc"><img src="img/athaullah.jpg" alt="Dr. Athaullah"><div class="sn">Dr. Athaullah</div><div class="sr">Sr. Consultant Physician</div></div>
+    <div class="sc"><div class="av">A</div><div class="sn">Dr. Anunayi</div><div class="sr">Professor of Pathology</div></div>
+    <div class="sc"><div class="av">MB</div><div class="sn">Dr. Mahboob Basha</div><div class="sr">MD, Professor of Pediatrics</div></div>
+    <div class="sc"><div class="av">RSR</div><div class="sn">Dr. Ram Subba Reddy</div><div class="sr">Professor of Psychiatry</div></div>
+    <div class="sc"><div class="av">M</div><div class="sn">Dr. Maddiah</div><div class="sr">Chief ENT Surgeon</div></div>
+    <div class="sc"><div class="av">V</div><div class="sn">Dr. Vinod</div><div class="sr">Retired Civil Surgeon</div></div>
+    <div class="sc"><div class="av">SP</div><div class="sn">Dr. Srinivas Prasad</div><div class="sr">Senior Neurologist</div></div>
+    <div class="sc"><div class="av">J</div><div class="sn">Dr. Jyothi</div><div class="sr">Senior Neurologist</div></div>
+    <div class="sc"><div class="av">MCS</div><div class="sn">Dr. Mulugu Chandra Sekhar</div><div class="sr">HOD &amp; Professor of Medicine</div></div>
+    <div class="sc"><div class="av">N</div><div class="sn">Dr. Narsaraju</div><div class="sr">Chief Intervention Cardiologist</div></div>
+    <div class="sc"><img src="img/seetharam.jpg" alt="Dr. B. Seetharam"><div class="sn">Dr. B. Seetharam</div><div class="sr">Diabetologist</div></div>
+    <div class="sc"><div class="av">SV</div><div class="sn">Dr. Soujanya Vaddala</div><div class="sr">Physician, Revive Center</div></div>
+    <div class="sc"><div class="av">FB</div><div class="sn">Dr. Fahmida Banu</div><div class="sr">MD, MRCOG, FRCOG</div></div>
+    <div class="sc"><img src="img/drravinderreddy.jpg" alt="Dr. Ravinder Reddy"><div class="sn">Dr. Ravinder Reddy</div><div class="sr">MD, DNB (Cardiologist)</div></div>
+    <div class="sc"><div class="av">RKJ</div><div class="sn">Dr. R.K. Jain</div><div class="sr">MD, DM (Cardiology)</div></div>
+    <div class="sc"><div class="av">KRR</div><div class="sn">Dr. Kasturi Ravinder Reddy</div><div class="sr">MD, DNB (Cardiology)</div></div>
+    <div class="sc"><div class="av">RD</div><div class="sn">Dr. Rakesh Dhir</div><div class="sr">MD, Professor of Medicine</div></div>
+    <div class="sc"><img src="img/ghouse.jpg" alt="Dr. Syed Mohammed Ghouse"><div class="sn">Dr. Syed Mohammed Ghouse</div><div class="sr">MS, DNB (Urology)</div></div>
+    <div class="sc"><img src="img/harsh.jpg" alt="Dr. Harsh Atul Hirani"><div class="sn">Dr. Harsh Atul Hirani</div><div class="sr">MBBS, F.Diab, ACAI</div></div>
+    <div class="sc"><div class="av">MA</div><div class="sn">Dr. Murali Angerekula</div><div class="sr">Pain Specialist, USA</div></div>
+    <div class="sc"><div class="av">PR</div><div class="sn">Dr. Paladugu Ramesh</div><div class="sr">Vascular Surgeon, Dallas USA</div></div>
+    <div class="sc"><div class="av">M</div><div class="sn">Dr. Mallikarjunappa</div><div class="sr">Retired Civil Surgeon</div></div>
+    <div class="sc"><div class="av">CR</div><div class="sn">Dr. Chalapathi Rao</div><div class="sr">MBBS, DA</div></div>
+    <div class="sc"><div class="av">SR</div><div class="sn">Dr. Srinivas Reddy</div><div class="sr">MD (Physician), Mahabubnagar</div></div>
+    <div class="sc"><div class="av">S</div><div class="sn">Dr. Subbarayudu</div><div class="sr">Gynecologist, Retired Civil Surgeon</div></div>
+    <div class="sc"><div class="av">VK</div><div class="sn">Dr. Vasanth Kumar</div><div class="sr">MD, Professor of Medicine</div></div>
+    <div class="sc"><img src="img/drbasavarajnaik.jpg" alt="Dr. Basavaraj Naik"><div class="sn">Dr. Basavaraj Naik</div><div class="sr">MD, Professor of Medicine</div></div>
+    <div class="sc"><div class="av">G</div><div class="sn">Dr. Goutham</div><div class="sr">PG, MNR Medical College</div></div>
+    <div class="sc"><div class="av">M</div><div class="sn">Mrs. Mrunala</div><div class="sr">Dietetics Lead</div></div>
+    <div class="sc"><div class="av">RB</div><div class="sn">Dr. R. Bai</div><div class="sr">IMA President, Kukatpally</div></div>
   </div>
 </section>
 

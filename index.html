@@ -17,7 +17,6 @@
   nav.tabs a:hover, nav.tabs a.active { background:#1B3A5C; color:#fff; }
 
   .countdown-bar { background:#1B3A5C; color:#fff; text-align:center; padding:10px 16px; font-size:14px; font-weight:700; }
-  .countdown-bar .warn { color:#ffd27a; }
   .countdown-bar span { color:#F0EAD6; }
 
   .hero { max-width:960px; margin:0 auto; padding:28px 20px 16px; text-align:center; }
@@ -36,13 +35,11 @@
 
   .proof { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:16px; }
   .proof .pill { background:#fff; border:1px solid #e2e8ec; border-radius:999px; padding:10px 16px; font-size:13px; font-weight:700; color:#1B3A5C; }
-  .proof .pill.hot { background:#fdf2f2; border-color:#f3d3d3; color:#9C2B2B; }
   .proof .pill.ok { background:#f2f9f4; border-color:#cfe8d6; color:#1E7A34; }
 
   .cta-row { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:18px; }
   .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; font-weight:800; font-size:15px; padding:14px 22px; border-radius:12px; }
   .btn-wa { background:#25D366; color:#fff; }
-  .btn-wa:hover { filter:brightness(0.95); }
   .btn-sec { background:#fff; color:#1B3A5C; border:1px solid #cfd8df; }
 
   .infobar { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:22px; }
@@ -63,6 +60,23 @@
   .scope-banner-img { width:100%; border-radius:12px; display:block; }
   .scope-labels { display:flex; margin-top:8px; gap:4px; flex-wrap:wrap; }
   .scope-labels div { flex:1; min-width:70px; font-size:11px; font-weight:800; color:#1B3A5C; }
+
+  .faculty-section { max-width:1100px; margin:0 auto; padding:20px 20px 30px; }
+  .faculty-section h3 { text-align:center; color:#1B3A5C; font-size:24px; font-weight:900; letter-spacing:1px; margin-bottom:8px; }
+  .faculty-section .faculty-sub { text-align:center; color:#666; font-size:13px; margin-bottom:30px; }
+  .faculty-section h4 { text-align:center; color:#C9A227; font-size:14px; font-weight:800; letter-spacing:1.5px; margin:30px 0 18px 0; text-transform:uppercase; }
+
+  .featured-grid { display:flex; gap:24px; justify-content:center; flex-wrap:wrap; margin-bottom:30px; }
+  .featured-card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.08); width:240px; max-width:100%; text-align:center; border:2px solid #C9A227; }
+  .featured-card img { width:100%; height:240px; object-fit:cover; object-position:top center; display:block; background:#e8eef2; }
+  .featured-card .avatar { width:100%; height:240px; background:#1B3A5C; color:#C9A227; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:48px; letter-spacing:2px; }
+  .featured-card .fname { padding:14px 12px 4px; font-size:15px; font-weight:800; color:#1B3A5C; line-height:1.3; }
+  .featured-card .frole { padding:0 12px 16px; font-size:12px; color:#666; line-height:1.4; }
+
+  .names-block { background:#fff; border-radius:10px; padding:24px; box-shadow:0 1px 4px rgba(0,0,0,0.05); }
+  .names-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:8px 24px; }
+  .names-grid div { font-size:13.5px; color:#333; padding:6px 0; border-bottom:1px solid #eef1f3; }
+  .names-grid div b { color:#1B3A5C; font-weight:700; }
 
   section { max-width:1000px; margin:0 auto; padding:24px 20px; }
   section h3 { color:#1B3A5C; font-size:20px; font-weight:800; margin-bottom:16px; border-left:5px solid #1E6E6E; padding-left:12px; }
@@ -118,13 +132,7 @@
     .scope-labels div { flex:1 1 30%; }
     section { padding:18px 14px; }
     iframe.gform { height:560px; }
-  }  .faculty-section { max-width:960px; margin:0 auto; padding:10px 20px 24px; }
-  .faculty-section h4 { text-align:center; color:#1B3A5C; font-size:14px; font-weight:800; letter-spacing:1px; margin-bottom:16px; }
-  .faculty-grid { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
-  .faculty-card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 6px rgba(0,0,0,0.08); width:220px; max-width:100%; text-align:center; }
-  .faculty-card img { width:100%; height:220px; object-fit:cover; object-position:top center; display:block; }
-  .faculty-card .fname { padding:12px 12px 2px; font-size:14px; font-weight:800; color:#1B3A5C; }
-  .faculty-card .frole { padding:0 12px 14px; font-size:12px; color:#666; line-height:1.4; }
+  }
 </style>
 </head>
 <body>
@@ -138,6 +146,7 @@
     </div>
   </div>
   <nav class="tabs">
+    <a href="#faculty">Faculty</a>
     <a href="#agenda">Agenda</a>
     <a href="#committee">Committee</a>
     <a href="#register" class="active">Register</a>
@@ -148,7 +157,7 @@
 
 <div class="hero">
   <div class="top-banner">
-    <div class="l1">FIRST IN INDIA &mdash; DON'T MISS THIS</div>
+    <div class="l1">HOMA CME 2026 &mdash; FIRST IN INDIA</div>
     <div class="l2">Update Your Metabolic Knowledge. Join the Next Big Wave in Central Obesity, Heart &amp; Diabetes Care.</div>
   </div>
   <div class="badge">HOMA CME 2026 &bull; T-HUB, GACHIBOWLI, HYDERABAD</div>
@@ -162,9 +171,9 @@
   <div class="tagline-red">Screens Don't Discriminate. Neither Does Diabetes. &mdash; Everyone at Risk, Not Just Desk Jobs.</div>
 
   <div class="proof">
-    <div class="pill hot" id="seatsPill">6 doctors registered &middot; 44 seats remaining</div>
     <div class="pill ok">NMC / IMA &middot; 2 Credit Points Approved</div>
-    <div class="pill hot">Early Bird &#8377;2,500 till 16 Sept</div>
+    <div class="pill">Registration closes 20 Sept</div>
+    <div class="pill">For MBBS Doctors &amp; Specialists</div>
   </div>
 
   <div class="cta-row">
@@ -177,7 +186,7 @@
     <div class="item">&#128337; 9:00 AM &ndash; 6:50 PM</div>
     <div class="item">&#128205; T-Hub, Gachibowli &mdash; Telangana's Premier Startup &amp; Innovation Hub</div>
     <div class="item green">&#9989; NMC / IMA &middot; 2 Credit Points Approved</div>
-    <div class="item red">&#128293; Early Bird &#8377;2,500 (till 16 Sept) &rarr; &#8377;3,000 after &bull; Few Seats Remaining</div>
+    <div class="item red">&#128293; Registration closes 20 September &bull; &#8377;3,000</div>
   </div>
 </div>
 
@@ -207,16 +216,70 @@
   </div>
 </div>
 
-<div class="faculty-section">
-  <h4>FEATURED FACULTY</h4>
-  <div class="faculty-grid">
-    <div class="faculty-card">
-      <img src="img/vistabhaskar.jpg" alt="Dr. Vijay Bhaskar">
-      <div class="fname">Dr. Vijay Bhaskar, MD</div>
-      <div class="frole">Radiology / Imaging Lead<br>Chief Radiologist, Vista Imaging</div>
+<section id="faculty" class="faculty-section">
+  <h3>Faculty &amp; Speakers</h3>
+  <div class="faculty-sub">Distinguished clinicians, specialists and researchers leading HOMA CME 2026</div>
+
+  <h4>Featured Faculty</h4>
+  <div class="featured-grid">
+    <div class="featured-card">
+      <div class="avatar">SNM</div>
+      <div class="fname">Dr. Muddu Surendra Nehru</div>
+      <div class="frole">MD &mdash; Organising Chairperson<br>HOMA Healthcare Center</div>
+    </div>
+    <div class="featured-card">
+      <img src="img/vamsee.jpg" alt="Dr. Vamsee Krishna">
+      <div class="fname">Dr. Vamsee Krishna</div>
+      <div class="frole">MD (Physician) &mdash; Organising Secretary<br>Leela Hospital</div>
+    </div>
+    <div class="featured-card">
+      <img src="img/vijayabhaskarnori.jpg" alt="Dr. Vijaya Bhaskar Nori">
+      <div class="fname">Dr. Vijaya Bhaskar Nori</div>
+      <div class="frole">Head &amp; Chief Radiologist<br>Vista Imaging Center</div>
+    </div>
+    <div class="featured-card">
+      <div class="avatar">RD</div>
+      <div class="fname">Dr. Ramadevi</div>
+      <div class="frole">D.M.E., Medical Education<br>Govt of Telangana &mdash; Special Invitee</div>
     </div>
   </div>
-</div>
+
+  <h4>Speakers &amp; Chairpersons</h4>
+  <div class="names-block">
+    <div class="names-grid">
+      <div><b>Dr. Athaullah</b> &mdash; Sr. Consultant Physician</div>
+      <div><b>Dr. Anunayi</b> &mdash; Professor of Pathology</div>
+      <div><b>Dr. Mahboob Basha</b> &mdash; MD, Professor of Pediatrics</div>
+      <div><b>Dr. Ram Subba Reddy</b> &mdash; Professor of Psychiatry</div>
+      <div><b>Dr. Maddiah</b> &mdash; Chief ENT Surgeon</div>
+      <div><b>Dr. Vinod</b> &mdash; MBBS, Retired Civil Surgeon</div>
+      <div><b>Dr. Srinivas Prasad</b> &mdash; Senior Neurologist</div>
+      <div><b>Dr. Jyothi</b> &mdash; Senior Neurologist</div>
+      <div><b>Dr. Mulugu Chandra Sekhar</b> &mdash; HOD &amp; Professor of Medicine</div>
+      <div><b>Dr. Narsaraju</b> &mdash; Chief Intervention Cardiologist</div>
+      <div><b>Dr. B. Seetharam</b> &mdash; Diabetologist</div>
+      <div><b>Dr. Soujanya Vaddala</b> &mdash; Physician, Revive Center</div>
+      <div><b>Dr. Fahmida Banu</b> &mdash; MD, MRCOG, FRCOG</div>
+      <div><b>Dr. Ravinder Reddy</b> &mdash; MD, DNB (Cardiologist)</div>
+      <div><b>Dr. R.K. Jain</b> &mdash; MD, DM (Cardiology)</div>
+      <div><b>Dr. Kasturi Ravinder Reddy</b> &mdash; MD, DNB (Cardiology)</div>
+      <div><b>Dr. Rakesh Dhir</b> &mdash; MD, Professor of Medicine</div>
+      <div><b>Dr. Syed Mohammed Ghouse</b> &mdash; MS, DNB (Urology)</div>
+      <div><b>Dr. Harsh Atul Hirani</b> &mdash; MBBS, F.Diab, ACAI, NCAM</div>
+      <div><b>Dr. Murali Angerekula</b> &mdash; Pain Specialist, USA</div>
+      <div><b>Dr. Paladugu Ramesh</b> &mdash; Vascular Surgeon, Dallas USA</div>
+      <div><b>Dr. Mallikarjunappa</b> &mdash; MBBS, Retired Civil Surgeon</div>
+      <div><b>Dr. Chalapathi Rao</b> &mdash; MBBS, DA</div>
+      <div><b>Dr. Srinivas Reddy</b> &mdash; MD (Physician), Mahabubnagar</div>
+      <div><b>Dr. Subbarayudu</b> &mdash; Gynecologist, Retired Civil Surgeon</div>
+      <div><b>Dr. Vasanth Kumar</b> &mdash; MD, Professor of Medicine (RSSDI)</div>
+      <div><b>Dr. Basavaraj Naik</b> &mdash; MD, Professor of Medicine</div>
+      <div><b>Dr. Goutham</b> &mdash; PG</div>
+      <div><b>Mrs. Mrunala</b> &mdash; Dietetics Lead</div>
+      <div><b>Dr. R. Bai</b> &mdash; IMA President, Kukatpally</div>
+    </div>
+  </div>
+</section>
 
 <section id="agenda">
   <h3>Scientific Programme</h3>
@@ -227,10 +290,10 @@
   <table class="agenda">
     <tr><th>Time</th><th>Topic</th><th>Speaker</th><th>Chair</th></tr>
     <tr><td>8:30&ndash;9:00</td><td>Registration &amp; CME Desk</td><td>Organising Team</td><td>&mdash;</td></tr>
-    <tr><td>9:00&ndash;9:20</td><td>Pathology of Beta Cells and Diabetes</td><td>Dr. Anunayi (Professor of Pathology) &middot; Dr. Surendra Nehru Muddu</td><td>Dr. Mahboob Basha, MD (Professor of Pediatrics) &middot; Dr. Ram Subba Reddy (Professor of Psychiatry)</td></tr>
-    <tr><td>9:20&ndash;9:40</td><td>Metabolic Phenotyping</td><td>Dr. Surendra Nehru Muddu</td><td>Dr. Maddiah (ENT Surgeon) &middot; Dr. Vinod, MBBS</td></tr>
-    <tr class="new"><td>9:40&ndash;10:00</td><td>Once-Weekly Basal Insulin &mdash; Insulin Icodec (Awiqli)</td><td>Dr. Athaullah</td><td>Dr. Gauri (Nalgonda) &middot; Dr. Ramana, MBBS, DA (Anesthesia)</td></tr>
-    <tr><td>10:00&ndash;10:20</td><td>Lab Matrix: HOMA-IR, TyG Index &amp; related markers</td><td>Dr. Rama Devi, DME &middot; Dr. Surendra Nehru Muddu</td><td>Dr. Vamsee Krishna &middot; Dr. Basavaraj Naik</td></tr>
+    <tr><td>9:00&ndash;9:20</td><td>Pathology of Beta Cells and Diabetes</td><td>Dr. Anunayi &middot; Dr. Surendra Nehru Muddu</td><td>Dr. Mahboob Basha &middot; Dr. Ram Subba Reddy</td></tr>
+    <tr><td>9:20&ndash;9:40</td><td>Metabolic Phenotyping</td><td>Dr. Surendra Nehru Muddu</td><td>Dr. Maddiah &middot; Dr. Vinod</td></tr>
+    <tr class="new"><td>9:40&ndash;10:00</td><td>Once-Weekly Basal Insulin &mdash; Insulin Icodec (Aqli)</td><td>Dr. Athaullah</td><td>Dr. Gauri &middot; Dr. Ramana</td></tr>
+    <tr><td>10:00&ndash;10:20</td><td>Lab Matrix: HOMA-IR, TyG Index &amp; related markers</td><td>Dr. Rama Devi &middot; Dr. Surendra Nehru Muddu</td><td>Dr. Vamsee Krishna &middot; Dr. Basavaraj Naik</td></tr>
     <tr class="break"><td>10:20&ndash;10:30</td><td>Assemble for Inaugural / Minister's Arrival</td><td>Protocol</td><td>&mdash;</td></tr>
   </table>
   </div>
@@ -242,54 +305,54 @@
     <tr class="minister"><td>10:30&ndash;10:40</td><td>Welcome of Hon'ble Minister</td><td colspan="2">Organising Chair</td></tr>
     <tr class="minister"><td>10:40&ndash;10:55</td><td>Inauguration &mdash; Metric Explorer (Play Store Production)</td><td colspan="2">Dr. Muddu + Hon'ble Minister</td></tr>
     <tr class="minister"><td>10:55&ndash;11:05</td><td>Brief Remarks</td><td colspan="2">Hon'ble Minister</td></tr>
-    <tr class="minister"><td>11:05&ndash;11:10</td><td>&ldquo;BP: The Untold Truth&rdquo; &mdash; Community Presentation Moment</td><td colspan="2">Dr. Muddu</td></tr>
+    <tr class="minister"><td>11:05&ndash;11:10</td><td>&ldquo;BP: The Untold Truth&rdquo; &mdash; Community Presentation</td><td colspan="2">Dr. Muddu</td></tr>
     <tr class="minister"><td>11:10&ndash;11:20</td><td>Group Photograph &middot; Press Bytes</td><td colspan="2">Press Desk</td></tr>
     <tr class="break"><td>11:20&ndash;11:30</td><td>Tea &middot; Resume CME</td><td colspan="2">&mdash;</td></tr>
   </table>
   </div>
 
   <div class="block-head">BLOCK C &mdash; Late Morning CME</div>
-  <div class="block-sub">Session Chairpersons: to be confirmed</div>
   <div class="table-wrap">
   <table class="agenda">
     <tr><th>Time</th><th>Topic</th><th>Speaker</th><th>Chair</th></tr>
-    <tr><td>11:30&ndash;11:50</td><td>Newer Cardiovascular Changes in Diabetes</td><td>Dr. R.K. Jain, MD, DM (Cardiology)</td><td>Dr. Subbarayudu (Gynecologist) &middot; Dr. Chalapathi Rao, MBBS, DA (Anesthesia)</td></tr>
-    <tr class="new"><td>11:50&ndash;12:10</td><td>Central Obesity and the Role of CT Imaging</td><td>Dr. Vijay Bhaskar, MD &mdash; Chief Radiologist, Vista Imaging</td><td>Dr. Jhansi Vani &middot; Dr. Venkata Ramana, MS (Ortho)</td></tr>
-    <tr><td>12:10&ndash;12:30</td><td>My Experience with HOMA</td><td>Dr. Vamsee Krishna</td><td>Dr. Mallikarjunappa, MBBS</td></tr>
+    <tr><td>11:30&ndash;11:50</td><td>Newer Cardiovascular Changes in Diabetes</td><td>Dr. R.K. Jain</td><td>Dr. Subbarayudu &middot; Dr. Chalapathi Rao</td></tr>
+    <tr class="new"><td>11:50&ndash;12:10</td><td>Central Obesity and the Role of CT Imaging</td><td>Dr. Vijaya Bhaskar Nori</td><td>Dr. Jhansi Vani &middot; Dr. Venkata Ramana</td></tr>
+    <tr><td>12:10&ndash;12:30</td><td>My Experience with HOMA</td><td>Dr. Vamsee Krishna</td><td>Dr. Mallikarjunappa</td></tr>
     <tr class="break"><td>12:30&ndash;13:15</td><td>Lunch Break</td><td>&mdash;</td><td>&mdash;</td></tr>
   </table>
   </div>
-<div class="block-head">BLOCK D &mdash; Afternoon CME</div>
-  <div class="block-sub">Session Chairpersons: Dr. Ramesh Hanumkonda &middot; Dr. Vasanth Kumar</div>
+
+  <div class="block-head">BLOCK D &mdash; Afternoon CME</div>
+  <div class="block-sub">Session Chairpersons: Dr. Mallikarjunappa &middot; Dr. Chalapathi Rao</div>
   <div class="table-wrap">
   <table class="agenda">
     <tr><th>Time</th><th>Topic</th><th>Speaker</th><th>Chair</th></tr>
-    <tr><td>13:15&ndash;13:25</td><td>Fireside Chat &mdash; Neuro Complications in Diabetes</td><td>Dr. Srinivas Prasad</td><td>Dr. Jyothi (Neurologist)</td></tr>
-    <tr><td>13:25&ndash;13:45</td><td>Metformin in Diabetes</td><td>Dr. Mulugu Chandra Sekhar</td><td>Dr. Narsaraju, MD, DM (Cardiology)</td></tr>
-    <tr><td>13:55&ndash;14:15</td><td>Newer Diabetic Drugs &mdash; SGLT2 Inhibitors</td><td>Dr. B. Seetharam</td><td>Dr. Maddiah</td></tr>
-    
-    <tr><td>14:15&ndash;14:35</td><td>Newer Drugs &mdash; DPP4 Inhibitors</td><td>Dr. Soujanya Vaddala, MD</td><td>Dr. Athaullah</td></tr>
-    <tr><td>14:35&ndash;14:55</td><td>Diabetes in Pregnancy &amp; GDM</td><td>Dr. Fahmida Banu (Femci Hospital, Yusufguda)</td><td>Dr. Gowri</td></tr>
-    <tr class="new"><td>14:55&ndash;15:05</td><td>Newer Management in Cardiology among Diabetes and Other Patients</td><td>Dr. Ravinder Reddy, MD, DNB (Cardiologist)</td><td>Dr. Rama Krishna Prasad &middot; Dr. M.R. Rao, MBBS, DO (Ophthalmology)</td></tr>
-    <tr class="new"><td>15:05&ndash;15:15</td><td>PG Paper Presentation</td><td>PG (name TBA)</td><td>&mdash;</td></tr>
+    <tr><td>13:15&ndash;13:25</td><td>Fireside Chat &mdash; Neuro Complications in Diabetes</td><td>Dr. Srinivas Prasad</td><td>Dr. Jyothi</td></tr>
+    <tr><td>13:25&ndash;13:45</td><td>Metformin in Diabetes</td><td>Dr. Mulugu Chandra Sekhar</td><td>Dr. Narsaraju</td></tr>
+    <tr class="new"><td>13:55&ndash;14:15</td><td>Precision Medicine in Diabetes</td><td>Dr. B. Seetharam</td><td>Dr. Maddiah</td></tr>
+    <tr><td>14:15&ndash;14:35</td><td>Newer Drugs &mdash; DPP4 Inhibitors</td><td>Dr. Soujanya Vaddala</td><td>Dr. Athaullah</td></tr>
+    <tr><td>14:35&ndash;14:55</td><td>Diabetes in Pregnancy &amp; GDM</td><td>Dr. Fahmida Banu</td><td>Dr. Gowri</td></tr>
+    <tr class="new"><td>14:55&ndash;15:05</td><td>Newer Management in Cardiology among Diabetes Patients</td><td>Dr. Ravinder Reddy</td><td>Dr. Rama Krishna Prasad &middot; Dr. M.R. Rao</td></tr>
+    <tr class="new"><td>15:05&ndash;15:15</td><td>PG Paper Presentation</td><td>PG (TBA)</td><td>&mdash;</td></tr>
     <tr class="break"><td>15:15&ndash;15:30</td><td>Tea Break</td><td>&mdash;</td><td>&mdash;</td></tr>
-    <tr><td>15:30&ndash;15:50</td><td>Newer Lipid-Lowering Drugs</td><td>Dr. Ramesh Hanumkonda (Ex-President, APICON)</td><td>Dr. Vasanth Kumar</td></tr>
-    <tr><td>15:50&ndash;16:05</td><td>Diabesity &amp; Metabolic/Bariatric Surgery</td><td>Dr. Bikshith</td><td>Dr. Srinivas</td></tr>
+    <tr class="new"><td>15:30&ndash;15:50</td><td>Newer Diabetic Drugs &mdash; SGLT2 Inhibitors</td><td>Dr. Rakesh Dhir</td><td>Dr. Mallikarjunappa</td></tr>
+    <tr class="new"><td>15:50&ndash;16:05</td><td>Urology in Diabetes</td><td>Dr. Syed Mohammed Ghouse</td><td>Dr. Srinivas Reddy</td></tr>
     <tr><td>16:05&ndash;16:20</td><td>Panel &mdash; Is HbA1c Enough? HOMA-IR/TyG in Screening</td><td>Muddu &middot; Vasanth Kumar &middot; Ramadevi &middot; R.K. Jain &middot; Pradeep</td><td>Moderator: Dr. Vamsee Krishna</td></tr>
   </table>
   </div>
 
-  <div class="block-head">BLOCK E &mdash; Workshops (4:20 PM &ndash; 6:00 PM) &amp; USA Speakers (after 6:00 PM)</div>
+  <div class="block-head">BLOCK E &mdash; Workshops &amp; USA Speakers</div>
   <div class="block-sub">Workshop Chair: Dr. Surendra Nehru Muddu &middot; Co-Chair: Dr. Vamsee Krishna</div>
   <div class="table-wrap">
   <table class="agenda">
     <tr><th>Time</th><th>Session</th><th colspan="2">Faculty</th></tr>
-    <tr><td>16:20&ndash;16:50</td><td>W1 &mdash; What is Metric Explorer? Live Clinical Walkthrough</td><td colspan="2">Dr. Muddu &middot; Dr. Basavaraj Naik &middot; Dr. Goutham</td></tr>
-    <tr><td>16:50&ndash;17:25</td><td>W2 &mdash; Diet &amp; Exercise Design by Phenotype</td><td colspan="2">Dr. Muddu &middot; Mrs. Mrunala &middot; Dr. Bikshith</td></tr>
-    <tr><td>17:25&ndash;17:55</td><td>W3 &mdash; Metabolism Calculator &amp; Data Analysis (HOMA Online Tools)</td><td colspan="2">Dr. Muddu &middot; Dr. Ramadevi &middot; Dr. Vamsee Krishna</td></tr>
-    <tr><td>17:55&ndash;18:00</td><td>Transition to USA Speakers (virtual)</td><td colspan="2">Organising Chair</td></tr>
-    <tr class="new"><td>18:00&ndash;18:10</td><td>Pain Management in Diabetes</td><td>Dr. Murali Angerekula (Pain Specialist, USA)</td><td>&mdash;</td></tr>
-    <tr class="new"><td>18:10&ndash;18:40</td><td>PVD Complications in Diabetes</td><td>Dr. Paladugu Ramesh (Vascular Surgeon, Dallas, USA)</td><td>&mdash;</td></tr>
+    <tr><td>16:20&ndash;16:45</td><td>W1 &mdash; What is Metric Explorer? Live Clinical Walkthrough</td><td colspan="2">Dr. Muddu &middot; Dr. Basavaraj Naik &middot; Dr. Goutham</td></tr>
+    <tr><td>16:45&ndash;17:00</td><td>W2 &mdash; Diet &amp; Exercise Design by Phenotype</td><td colspan="2">Dr. Muddu &middot; Mrs. Mrunala</td></tr>
+    <tr class="new"><td>17:00&ndash;17:20</td><td>AI-Enabled Physician</td><td colspan="2">Dr. Harsh Atul Hirani</td></tr>
+    <tr><td>17:20&ndash;17:50</td><td>W3 &mdash; Metabolism Calculator &amp; Data Analysis</td><td colspan="2">Dr. Muddu &middot; Dr. Ramadevi &middot; Dr. Vamsee Krishna</td></tr>
+    <tr><td>17:50&ndash;18:00</td><td>Transition to USA Speakers (virtual)</td><td colspan="2">Organising Chair</td></tr>
+    <tr class="new"><td>18:00&ndash;18:10</td><td>Pain Management in Diabetes</td><td>Dr. Murali Angerekula (USA)</td><td>&mdash;</td></tr>
+    <tr class="new"><td>18:10&ndash;18:40</td><td>PVD Complications in Diabetes</td><td>Dr. Paladugu Ramesh (Dallas, USA)</td><td>&mdash;</td></tr>
     <tr><td>18:40&ndash;18:50</td><td>Valedictory &middot; CME Feedback &middot; Certificates Process</td><td colspan="2">Organising Chair</td></tr>
   </table>
   </div>
@@ -298,31 +361,28 @@
 <section id="committee">
   <h3>Organising Committee</h3>
   <div class="committee-grid">
-    <div><div class="role">ORGANISING CHAIRPERSON</div><div class="name">Dr. Surendra Nehru Muddu, MD &mdash; HOMA Healthcare Center</div></div>
+    <div><div class="role">ORGANISING CHAIRPERSON</div><div class="name">Dr. Muddu Surendra Nehru, MD &mdash; HOMA Healthcare Center</div></div>
     <div><div class="role">SCIENTIFIC CHAIRPERSON</div><div class="name">Dr. Vasanth Kumar, MD &mdash; Professor of Medicine (RSSDI)</div></div>
-    <div><div class="role">CO-CHAIRPERSONS</div><div class="name">Dr. R.K. Jain (Cardiology) &middot; Dr. Ramesh Hanumkonda (Ex-President, APICON) &middot; Dr. Ravinder Reddy</div></div>
+    <div><div class="role">CO-CHAIRPERSONS</div><div class="name">Dr. R.K. Jain (Cardiology) &middot; Dr. Kasturi Ravinder Reddy (Principal, MNR Medical College)</div></div>
     <div><div class="role">ORGANISING SECRETARY</div><div class="name">Dr. Vamsee Krishna</div></div>
-    <div><div class="role">RADIOLOGY / IMAGING LEAD</div><div class="name">Dr. Vijay Bhaskar &mdash; Vista Imaging (T-Hub)</div></div>
-    <div><div class="role">JOINT ORGANISING SECRETARIES</div><div class="name">Dr. Basavaraj Naik &middot; Dr. Riyaz &middot; Dr. Goutham &middot; Dr. Reddy (Mamatha) &middot; Dr. Narayan (Mamatha)</div></div>
-    <div><div class="role">SCIENTIFIC CONVENER</div><div class="name">Dr. Ramadevi, MD (Biochemistry)</div></div>
+    <div><div class="role">RADIOLOGY / IMAGING LEAD</div><div class="name">Dr. Vijaya Bhaskar Nori &mdash; Vista Imaging (T-Hub)</div></div>
+    <div><div class="role">JOINT ORGANISING SECRETARIES</div><div class="name">Dr. Basavaraj Naik &middot; Dr. Goutham &middot; Dr. Reddy (Mamatha) &middot; Dr. Narayan (Mamatha)</div></div>
+    <div><div class="role">SCIENTIFIC CONVENER</div><div class="name">Dr. Ramadevi, D.M.E.</div></div>
     <div><div class="role">WORKSHOP CONVENER</div><div class="name">Dr. Surendra Nehru Muddu</div></div>
     <div><div class="role">WORKSHOP DIETETICS LEAD</div><div class="name">Mrs. Mrunala</div></div>
     <div><div class="role">IMA COORDINATION</div><div class="name">Dr. R. Bai &mdash; IMA President, Kukatpally</div></div>
-    <div><div class="role">ESI COORDINATORS</div><div class="name">Dr. Naresh &middot; Dr. Srinivas &middot; Dr. Umesh</div></div>
   </div>
 </section>
 
 <section id="register">
   <h3>Registration</h3>
   <div class="reg-box">
-    <div class="price">&#8377;2,500 <small>till 16 Sept &middot; then &#8377;3,000</small></div>
-    <div style="margin-top:6px; color:#9C2B2B; font-weight:700;" id="regSeatsLine">Only 50 seats &mdash; 44 remaining</div>
+    <div class="price">&#8377;3,000</div>
     <p style="margin-top:12px; color:#555; font-size:14px;">Fee includes conference kit, lunch &amp; refreshments. NMC / IMA &middot; 2 credit points approved.</p>
 
     <div class="cta-row">
       <a class="btn btn-wa" href="https://wa.me/919963721999?text=Hi%2C%20I%27m%20interested%20in%20HOMA%20CME%202026.%20Please%20share%20details." target="_blank" rel="noopener">&#128172; I'M INTERESTED &mdash; Tap to WhatsApp Us</a>
     </div>
-    <div style="color:#777; font-size:13px; margin-top:10px;">No time to fill a form? One tap, we'll follow up with you directly.</div>
 
     <div class="upi-wrap">
       <img src="img/upi_qr.png" alt="UPI QR" onerror="this.style.display='none'">
@@ -351,52 +411,29 @@
 </footer>
 
 <div class="sticky-cta">
-  <div class="meta" id="stickyMeta">44 seats left &middot; Early bird till 16 Sept</div>
+  <div class="meta">Registration closes 20 Sept &middot; &#8377;3,000</div>
   <a class="btn btn-wa" href="https://wa.me/919963721999?text=Hi%2C%20I%27m%20interested%20in%20HOMA%20CME%202026.%20Please%20share%20details." target="_blank" rel="noopener">Register on WhatsApp</a>
 </div>
 
 <script>
 (function () {
-  var REGISTERED = 7;
-  var CAPACITY = 50;
-  var left = Math.max(0, CAPACITY - REGISTERED);
-  var seatsEl = document.getElementById('seatsPill');
-  if (seatsEl) seatsEl.textContent = REGISTERED + ' doctors registered \u00B7 ' + left + ' seats remaining';
-  var regLine = document.getElementById('regSeatsLine');
-  if (regLine) regLine.textContent = 'Only ' + CAPACITY + ' seats \u2014 ' + left + ' remaining';
-  var stickyMeta = document.getElementById('stickyMeta');
-
-  var earlyBirdEnd = new Date('2026-09-16T23:59:59+05:30').getTime();
   var eventStart = new Date('2026-09-21T09:00:00+05:30').getTime();
   var bar = document.getElementById('countdownBar');
-
-  function pad(n) { return n < 10 ? '0' + n : String(n); }
-
+  if (!bar) return;
+  function pad(n){ return n<10 ? '0'+n : String(n); }
   function tick() {
     var now = Date.now();
-    var target, label, warn;
-    if (now <= earlyBirdEnd) {
-      target = earlyBirdEnd;
-      label = 'Early bird ends in';
-      warn = true;
-    } else {
-      target = eventStart;
-      label = 'Event starts in';
-      warn = false;
+    var diff = Math.max(0, eventStart - now);
+    if (diff === 0) {
+      bar.innerHTML = '<span>Event is live &mdash; welcome to HOMA CME 2026</span>';
+      return;
     }
-    var diff = Math.max(0, target - now);
     var d = Math.floor(diff / 86400000);
     var h = Math.floor((diff % 86400000) / 3600000);
     var m = Math.floor((diff % 3600000) / 60000);
     var s = Math.floor((diff % 60000) / 1000);
     var timeStr = d + 'd ' + pad(h) + 'h ' + pad(m) + 'm ' + pad(s) + 's';
-    if (bar) {
-      bar.innerHTML = (warn ? '<span class="warn">' + label + ' ' + timeStr + '</span>' : '<span>' + label + ' ' + timeStr + '</span>') +
-        ' \u00B7 <span>' + left + ' seats left</span> \u00B7 \u20B9' + (now <= earlyBirdEnd ? '2,500' : '3,000');
-    }
-    if (stickyMeta) {
-      stickyMeta.textContent = left + ' seats left \u00B7 ' + (now <= earlyBirdEnd ? 'Early bird till 16 Sept' : 'Fee \u20B93,000');
-    }
+    bar.innerHTML = '<span>Event starts in ' + timeStr + '</span> &middot; <span>Registration closes 20 Sept</span> &middot; <span>\u20B93,000</span>';
   }
   tick();
   setInterval(tick, 1000);
